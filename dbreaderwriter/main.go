@@ -132,7 +132,7 @@ func runPg(connStr string) {
 
 	for {
 		if err := db.Ping(); err != nil {
-			fmt.Println("failed to ping: ", err)
+			fmt.Println("Failed to ping: ", err)
 		} else{
 			fmt.Println("Ping successful")
 		}
