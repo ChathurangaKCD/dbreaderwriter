@@ -57,7 +57,11 @@ func main() {
 			params.Set("sslrootcert", caCertPath)
 			fmt.Printf("Using CA cert: %s\n", caCertPath)
 		} else {
-			params.Set("sslmode", "require")
+			sslMode := os.Getenv("SSL_MODE")
+			if sslMode == "" {
+				sslMode = "require"
+			}
+			params.Set("sslmode", sslMode)
 		}
 
 		conn := &url.URL{
