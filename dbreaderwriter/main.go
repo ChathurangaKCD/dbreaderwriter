@@ -133,6 +133,8 @@ func runPg(connStr string) {
 	for {
 		if err := db.Ping(); err != nil {
 			fmt.Println("failed to ping: ", err)
+		} else{
+			fmt.Println("ping successful")
 		}
 		writeEnabled, _ := strconv.ParseBool(os.Getenv("PG_WRITE"))
 		if writeEnabled {
