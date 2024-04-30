@@ -131,6 +131,9 @@ func runPg(connStr string) {
 	fmt.Println("Table exists/created")
 
 	for {
+		if err := db.Ping(); err != nil {
+			fmt.Println("failed to ping: ", err)
+		}
 		writeEnabled, _ := strconv.ParseBool(os.Getenv("PG_WRITE"))
 		if writeEnabled {
 			value := fmt.Sprintf("%d", time.Now().Unix())
