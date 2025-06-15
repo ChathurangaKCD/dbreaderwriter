@@ -1,0 +1,11 @@
+schemaVersion: "1.2"
+endpoints:
+    - name: reading-list-950
+      displayName: Reading List
+      service:
+        basePath: /api/v1/reading-list
+        port: 8080
+      type: REST
+      networkVisibilities:
+        - Project
+        - Public
