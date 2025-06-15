@@ -111,7 +111,7 @@ func runRedis(options *redis.Options) {
 		}
 		fmt.Println("The value of key is:", val)
 		fmt.Println("-------------------------")
-		time.Sleep(10 * time.Second)
+		time.Sleep(time.Second)
 	}
 }
 
