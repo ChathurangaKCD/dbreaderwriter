@@ -1,6 +1,6 @@
 # dbreaderwriter
 
-A simple go program written to verify db/redis connectivity.
+A simple go program written to verify db/redis connectivity. 
 
 #### Build Configurations
 
